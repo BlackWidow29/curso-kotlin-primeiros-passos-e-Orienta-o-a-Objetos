@@ -16,6 +16,8 @@ fun main() {
     }
 
     //testaCondicoes(saldo)
+
+    testaBreakContinueLabel()
 }
 
 
@@ -26,11 +28,21 @@ fun testaRepeticoes() {
     for (i in 10 downTo 1 step 2) {
         println("Ordem inversa $i")
     }
-    
+
     var i = 0
-    while (i < 5){
+    while (i < 5) {
         println("$i")
         i++
+    }
+}
+
+fun testaBreakContinueLabel() {
+    loop@ for (i in 1..100) {
+        println("i = $i")
+        for (j in 1..100) {
+            println("j = $j")
+            if (j == 6) break@loop
+        }
     }
 }
 
