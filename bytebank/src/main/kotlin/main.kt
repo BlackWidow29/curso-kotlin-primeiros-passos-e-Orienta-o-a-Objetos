@@ -1,17 +1,37 @@
 fun main() {
 
     println("Bem vindo ao bytebank")
-    val titular: String = "Isabelly Dias"
-    val numeroConta: Int = 1000
-    var saldo = 0.0
-    saldo = 100 + 2.0
-    saldo += 200
+    for (i in 1..5) {
+        if (i == 4) {
+            break
+        }
+        val titular: String = "Isabelly Dias $i"
+        val numeroConta: Int = 1000 + i
+        var saldo = 10.0 + i
 
-    println("Titular $titular")
-    println("Número de conta $numeroConta")
-    println("Saldo da conta $saldo")
 
-    testaCondicoes(saldo)
+        println("Titular $titular")
+        println("Número de conta $numeroConta")
+        println("Saldo da conta $saldo")
+    }
+
+    //testaCondicoes(saldo)
+}
+
+
+fun testaRepeticoes() {
+    for (i in 1..5) {
+        println("$i")
+    }
+    for (i in 10 downTo 1 step 2) {
+        println("Ordem inversa $i")
+    }
+    
+    var i = 0
+    while (i < 5){
+        println("$i")
+        i++
+    }
 }
 
 fun testaCondicoes(saldo: Double) {
